@@ -7,6 +7,7 @@ namespace GerenciarTarefas
         public Form1()
         {
             InitializeComponent();
+            lblError.Visible = false;
         }
 
         private void btnTarefa_Click(object sender, EventArgs e)

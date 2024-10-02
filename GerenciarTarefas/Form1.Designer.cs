@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             btnVisualizar = new Button();
             mCDataTarefa = new MonthCalendar();
             lblError = new Label();
@@ -96,6 +97,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Cornsilk;
             ClientSize = new Size(583, 296);
             Controls.Add(btnVisualizar);
             Controls.Add(mCDataTarefa);
@@ -103,8 +105,9 @@
             Controls.Add(label1);
             Controls.Add(txbTarefa);
             Controls.Add(btnTarefa);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
-            Text = "Form1";
+            Text = "Cadastrar";
             ResumeLayout(false);
             PerformLayout();
         }
