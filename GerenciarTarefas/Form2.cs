@@ -59,10 +59,6 @@ namespace GerenciarTarefas
                             contador++;
                         }
                     }
-                  
-
-
-
                 }
                 catch (Exception ex)
                 {
