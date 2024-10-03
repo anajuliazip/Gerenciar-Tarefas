@@ -35,18 +35,6 @@
             vScrollBar1 = new VScrollBar();
             SuspendLayout();
             // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("News701 BT", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(651, 143);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Concluir";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
             // button2
             // 
             button2.FlatStyle = FlatStyle.Popup;
