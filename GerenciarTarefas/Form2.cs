@@ -27,19 +27,17 @@ namespace GerenciarTarefas
             {
                 Location = new Point(20, 20),
                 Size = new Size(300, 300),
-                AutoScroll = false
+                AutoScroll = true // Habilitar AutoScroll
             };
             vScrollBar = new VScrollBar
             {
-                Location = new Point(panel.Right, panel.Top),
-                Height = panel.Height,
+                Dock = DockStyle.Right, // Dock para ajustar a posição automaticamente
                 Minimum = 0
             };
+            panel.Controls.Add(vScrollBar); // Adicionar a barra de rolagem ao painel
             vScrollBar.Scroll += vScrollBar1_Scroll;
 
             this.Controls.Add(panel);
-            this.Controls.Add(vScrollBar);
-
             int contador = 0;
             string connectionString = "server=127.0.0.1;userid=root;password=root;database=gerenciartarefas";
 
@@ -228,7 +226,7 @@ namespace GerenciarTarefas
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
         {
 
-            panel.AutoScrollPosition = new Point(0, vScrollBar.Value);
+            panel.VerticalScroll.Value = vScrollBar.Value; 
 
         }
     }
