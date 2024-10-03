@@ -32,8 +32,19 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
-            vScrollBar1 = new VScrollBar();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("News701 BT", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(651, 143);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 23);
+            button1.TabIndex = 0;
+            button1.Text = "Concluir";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -59,21 +70,12 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
-            // vScrollBar1
-            // 
-            vScrollBar1.Location = new Point(786, -3);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(19, 454);
-            vScrollBar1.TabIndex = 3;
-            vScrollBar1.Scroll += vScrollBar1_Scroll;
-            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Cornsilk;
             ClientSize = new Size(805, 450);
-            Controls.Add(vScrollBar1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -89,6 +91,5 @@
         private Button button1;
         private Button button2;
         private Button button3;
-        private VScrollBar vScrollBar1;
     }
 }

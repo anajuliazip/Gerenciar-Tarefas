@@ -10,14 +10,37 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace GerenciarTarefas
 {
     public partial class Form2 : Form
     {
+
         private List<CheckBox> checkBoxes = new List<CheckBox>();
+        private Panel panel;
+        private VScrollBar vScrollBar;
         public Form2()
         {
             InitializeComponent();
+            // Configurar o painel e a barra de rolagem
+            panel = new Panel
+            {
+                Location = new Point(20, 20),
+                Size = new Size(300, 300),
+                AutoScroll = false
+            };
+            vScrollBar = new VScrollBar
+            {
+                Location = new Point(panel.Right, panel.Top),
+                Height = panel.Height,
+                Minimum = 0
+            };
+            vScrollBar.Scroll += vScrollBar1_Scroll;
+
+            this.Controls.Add(panel);
+            this.Controls.Add(vScrollBar);
+
+            int contador = 0;
             string connectionString = "server=127.0.0.1;userid=root;password=root;database=gerenciartarefas";
 
 
@@ -147,7 +170,7 @@ namespace GerenciarTarefas
                                 {
                                     conn.Open();
 
-                                  
+
                                     string query1 = "SELECT id FROM tarefas WHERE Tarefa = @tarefa";
 
                                     using (MySqlCommand cmd2 = new MySqlCommand(query1, conn))
@@ -158,7 +181,7 @@ namespace GerenciarTarefas
 
                                         if (id != null)
                                         {
-                                          
+
                                             string query = "DELETE FROM tarefas WHERE id = @id";
 
                                             using (MySqlCommand cmd = new MySqlCommand(query, conn))
