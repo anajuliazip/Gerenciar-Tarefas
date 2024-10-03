@@ -22,19 +22,19 @@ namespace GerenciarTarefas
         public Form2()
         {
             InitializeComponent();
-            // Configurar o painel e a barra de rolagem
+         
             panel = new Panel
             {
                 Location = new Point(20, 20),
                 Size = new Size(300, 300),
-                AutoScroll = true // Habilitar AutoScroll
+                AutoScroll = true 
             };
             vScrollBar = new VScrollBar
             {
-                Dock = DockStyle.Right, // Dock para ajustar a posição automaticamente
+                Dock = DockStyle.Right, 
                 Minimum = 0
             };
-            panel.Controls.Add(vScrollBar); // Adicionar a barra de rolagem ao painel
+          
             vScrollBar.Scroll += vScrollBar1_Scroll;
 
             this.Controls.Add(panel);
