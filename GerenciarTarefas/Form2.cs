@@ -35,7 +35,7 @@ namespace GerenciarTarefas
                 Minimum = 0
             };
           
-            vScrollBar.Scroll += vScrollBar1_Scroll;
+              vScrollBar.Scroll += vScrollBar1_Scroll;
 
             this.Controls.Add(panel);
             int contador = 0;
